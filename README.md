@@ -1,4 +1,4 @@
-# hello! This is Tali, just wanted to say hello before pasting my things here.
+# Hola! Soy Tali, estaré colocando mis cosas por aquí
 :>
 
 ### **Photos & relatives**
