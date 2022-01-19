@@ -1,49 +1,20 @@
-#!usr/bin/bash
+echo 'lets get over it'
 
-clear
-
-echo "in any case, you can do ctrl+c to stop at every moment"
-sleep 1
-echo "1"
-sleep 1
-echo "2"
-sleep 1
-echo "3"
-echo "starting!"
-
-sleep 1
-
-echo "hello I'm going to be installing this :>"
-
-sleep 2
-
-echo "updating to get the most recent things"
-sudo pacman -Sy
-sudo pacman -Syu
-
-sleep 1
-
-echo "let's start with the yay package, if this doesn't work, install base-devel please :D"
+sudo pacman -Sy && sudo pacman -Syu
+sudo pacman -S git go && sleep 1
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg --si
+makepkg -si && echo 'yay was installed!'
 
-sleep 1
+# now yay should be installed so I can just do this:
 
-clear
-echo "yay was installed!"
-
-sleep 0.5
-echo "now installing the fonts"
 yay -Sy noto-fonts-emoji
-sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono
-yay -S i3-gaps-rounded-git
-
-sleep 1
-echo "now installing terminal apps"
-sudo pacman -S ranger htop ncdu
-
-sleep 1
-
-echo "normal apps"
-sudo pacman -S nemo alacritty 
+sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu
+# now lets get to the window manager
+## starting with the apps
+sudo pacman -S nitrogen firefox rofi picom alacritty nemo
+yay -S i3-gaps-rounded-git && echo "i3 was installed"
+sudo pacman -S xorg-xinit
+cp xinit $HOME/.xinitrc
+mkdir $HOME/.config/i3
+cp i3conf $HOME/.config/i3/config
