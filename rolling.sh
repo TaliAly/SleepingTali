@@ -9,7 +9,7 @@ makepkg -si && echo 'yay was installed!'
 # now yay should be installed so I can just do this:
 
 yay -Sy noto-fonts-emoji
-sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu
+sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu feh
 # now lets get to the window manager
 ## starting with the apps
 
