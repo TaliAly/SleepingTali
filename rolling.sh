@@ -12,9 +12,13 @@ yay -Sy noto-fonts-emoji
 sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu
 # now lets get to the window manager
 ## starting with the apps
-sudo pacman -S nitrogen firefox rofi picom alacritty nemo
+
+# lets go for the visual thing shall we?
+
+sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit
 yay -S i3-gaps-rounded-git && echo "i3 was installed"
-sudo pacman -S xorg-xinit
 cp xinit $HOME/.xinitrc
 mkdir $HOME/.config/i3
 cp i3conf $HOME/.config/i3/config
+mkdir $HOME/.config/dunst
+cp dunstconf $HOME/.config/dunst/dunstrc
