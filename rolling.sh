@@ -1,3 +1,5 @@
+# !bin/bash
+
 echo 'lets get over it'
 
 sudo pacman -Sy && sudo pacman -Syu
@@ -22,3 +24,5 @@ mkdir $HOME/.config/i3
 cp i3conf $HOME/.config/i3/config
 mkdir $HOME/.config/dunst
 cp dunstconf $HOME/.config/dunst/dunstrc
+mkdir $HOME/.config/alacritty/
+cp alacritty.yml $HOME/.config/alacritty/
