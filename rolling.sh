@@ -19,8 +19,9 @@ sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu feh
 
 # this are the apps for the pc to nromally use
 sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad
-# if the system doesn't have installed bluetooth, this will install it 
-sudo pacman -S bluez bluez-utils blueman
+# if the system doesn't have installed bluetooth, this will install it
+sudo pacman -S bluez bluez-utils blueman pulseaudio-bluetooth
+sudo systemctl enable bluetooth.service
 # this is for the keyrings or to enable the login platforms
 yay -S qtkeychain gnome-keyring
 # and this is the window manager on use
