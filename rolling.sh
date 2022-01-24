@@ -17,7 +17,7 @@ sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu feh
 
 # lets go for the visual thing shall we?
 
-sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit
+sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad
 yay -S i3-gaps-rounded-git && echo "i3 was installed"
 cp xinit $HOME/.xinitrc
 mkdir $HOME/.config/i3
