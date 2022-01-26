@@ -18,7 +18,7 @@ sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu feh
 # lets go for the visual thing shall we?
 
 # this are the apps for the pc to nromally use
-sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad
+sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad ffmpegthumbnailer
 # if the system doesn't have installed bluetooth, this will install it
 sudo pacman -S bluez bluez-utils blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooth.service
