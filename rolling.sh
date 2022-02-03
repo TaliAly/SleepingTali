@@ -8,28 +8,50 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si && echo 'yay was installed!'
 
-# now yay should be installed so I can just do this:
+# now we have this I guess we can make folders
+
+mkdir $HOME/Downloads
+mkdir $HOME/Images
+mkdir $HOME/Documents
+mkdir $HOME/Videos
+
+# * since yay is installed time to download some fonts for the pc!
 
 yay -Sy noto-fonts-emoji
-sudo pacman -S ttf-fira-code ttf-fantasque-sans-mono ranger htop ncdu feh
-# now lets get to the window manager
-## starting with the apps
+sudo pacman -Sy ttf-fira-code ttf-jetbrains-mono ttf-hack ranger htop ncdu feh
 
-# lets go for the visual thing shall we?
+#* time to go for the visual enviroment!
+#* this are the apps for the pc to normally use
 
-# this are the apps for the pc to nromally use
-sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad ffmpegthumbnailer unzip zip unrar
-# if the system doesn't have installed bluetooth, this will install it
-sudo pacman -S bluez bluez-utils blueman pulseaudio-bluetooth
+echo "time to go for the normal apps"
+
+sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad ffmpegthumbnailer unzip zip unrar fish
+chsh -s /bin/fish
+
+#* if the system doesn't have installed bluetooth, this will install it
+
+sudo pacman -S bluez bluez-utils blueman pulseaudio-bluetooth pulseaudio-alsa
+
 sudo systemctl enable bluetooth.service
-# this is for the keyrings or to enable the login platforms
+
+#* this is for the keyrings or to enable the login platforms
+
 yay -S qtkeychain gnome-keyring
-# and this is the window manager on use
+
+#* and this is the window manager on use
 yay -S i3-gaps-rounded-git && echo "i3 was installed"
+
 cp xinit $HOME/.xinitrc
+#! checked
+
 mkdir $HOME/.config/i3
 cp i3conf $HOME/.config/i3/config
+#! checked
+
 mkdir $HOME/.config/dunst
 cp dunstconf $HOME/.config/dunst/dunstrc
+#! checked
+
 mkdir $HOME/.config/alacritty/
 cp alacritty.yml $HOME/.config/alacritty/
+#! checked

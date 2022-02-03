@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:hack 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -170,8 +170,15 @@ gaps outer 8
 border_radius 10
 exec setxkbmap -layout latam &
 exec picom &
+exec nm-applet &
+exec blueman-applet &
 exec nitrogen --restore &
-
+exec flameshot &
+exec polybar aly &
+exec xset s off &
 ## binds bro
-bindsym $mod+c exec nemo
-bindsym $mod+d exec rofi -show run
+bindsym $mod+c exec nemo 
+bindsym $mod+p exec flameshot gui
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+z exec redshift -O 5000
+bindsym $mod+x exec redshift -x
