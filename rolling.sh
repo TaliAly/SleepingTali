@@ -55,3 +55,6 @@ cp dunstconf $HOME/.config/dunst/dunstrc
 mkdir $HOME/.config/alacritty/
 cp alacritty.yml $HOME/.config/alacritty/
 #! checked
+
+mkdir $HOME/.config/polybar
+cp config $HOME/.config/polybar/config
