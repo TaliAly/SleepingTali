@@ -17,7 +17,7 @@ mkdir $HOME/Videos
 
 # * since yay is installed time to download some fonts for the pc!
 
-yay -Sy noto-fonts-emoji
+yay -Sy noto-fonts-emoji siji-git ttf-unifont
 sudo pacman -Sy ttf-fira-code ttf-jetbrains-mono ttf-hack ranger htop ncdu feh
 
 #* time to go for the visual enviroment!
