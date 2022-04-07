@@ -1,60 +1,50 @@
-# !bin/bash
+sudo pacman -Suy
 
-echo 'lets get over it'
+# o
+mkdir ~/Downloads
+mkdir ~/Images
+mkdir ~/Videos
+mkdir ~/Projects
 
-sudo pacman -Sy && sudo pacman -Syu
-sudo pacman -S git go && sleep 1
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si && echo 'yay was installed!'
+sleep 1
+echo "the main folders were made"
+sleep 2
 
-# now we have this I guess we can make folders
+# again o?
 
-mkdir $HOME/Downloads
-mkdir $HOME/Images
-mkdir $HOME/Documents
-mkdir $HOME/Videos
+## yay!  bin
 
-# * since yay is installed time to download some fonts for the pc!
+pacman -Sy --needed git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
 
-yay -Sy noto-fonts-emoji siji-git ttf-unifont
-sudo pacman -Sy ttf-fira-code ttf-jetbrains-mono ttf-hack ranger htop ncdu feh
+sudo pacman -Sy --needed fish
+chsh $USER -s /bin/fish
 
-#* time to go for the visual enviroment!
-#* this are the apps for the pc to normally use
+sleep 1
+echo "You have installed fish!"
+sleep 1
 
-echo "time to go for the normal apps"
+sudo pacman -Sy --needed noto-fonts-emoji ttf-droid htop ranger feh
 
-sudo pacman -S nitrogen firefox rofi picom alacritty nemo dunst xorg-xinit leafpad ffmpegthumbnailer unzip zip unrar fish
-chsh -s /bin/fish
+## it's time for the window manager!
 
-#* if the system doesn't have installed bluetooth, this will install it
+sleep 1 && echo "some apps right? :>" && sleep 1
 
-sudo pacman -S bluez bluez-utils blueman pulseaudio-bluetooth pulseaudio-alsa
+sudo pacman -Sy --needed rofi picom alacritty nemo dunst xorg-xinit ffmpegthumbnailer unzip zip unrar
+yay -S microsoft-edge-stable-bin
 
-sudo systemctl enable bluetooth.service
+sleep 1 && echo "just wanted to let you know I'm going to install the i3-gaps" sleep 1
 
-#* this is for the keyrings or to enable the login platforms
+sudo pacman -Sy --needed i3-gaps i3blocks
 
-yay -S qtkeychain gnome-keyring
+## now for the things about the install, I mean, the normal, I mean-
 
-#* and this is the window manager on use
-yay -S i3-gaps-rounded-git && echo "i3 was installed"
+## the .dotfiles
 
-cp xinit $HOME/.xinitrc
-#! checked
+cp xinitrc ~/.xinitrc
 
-mkdir $HOME/.config/i3
-cp i3conf $HOME/.config/i3/config
-#! checked
+mkdir ~/.config/i3 && cp i3conf ~/.config/i3/config
 
-mkdir $HOME/.config/dunst
-cp dunstconf $HOME/.config/dunst/dunstrc
-#! checked
-
-mkdir $HOME/.config/alacritty/
-cp alacritty.yml $HOME/.config/alacritty/
-#! checked
-
-mkdir $HOME/.config/polybar
-cp config $HOME/.config/polybar/config
+mkdir ~/.config/dunst && cp dunstconf ~/.config/dunst/dunstrc
