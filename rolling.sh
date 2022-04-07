@@ -37,7 +37,7 @@ yay -S microsoft-edge-stable-bin
 
 sleep 1 && echo "just wanted to let you know I'm going to install the i3-gaps" sleep 1
 
-sudo pacman -Sy --needed i3-gaps i3blocks
+sudo pacman -Sy --needed i3-gaps i3blocks pfetch-btw
 
 ## now for the things about the install, I mean, the normal, I mean-
 
