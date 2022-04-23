@@ -170,8 +170,7 @@ gaps outer 8
 border_radius 10
 exec setxkbmap -layout latam &
 exec picom &
-exec nm-applet &
-exec blueman-applet &
+exec dunst &
 exec nitrogen --restore &
 exec flameshot &
 exec polybar aly &

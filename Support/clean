@@ -1,0 +1,37 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+echo "Starting Point"
+
+# clean cache
+echo "Verificando cache en pacman"
+sudo pacman -Scc
+echo "cache de pacman borrada" && clear
+
+# Remove Orphans 
+
+echo "Verificando paquetes huerfanos"
+sudo pacman -Rcns $(pacman -Qtdq)
+echo "Paquetes huerfanos eliminados" && clear
+
+# Remove pkgbuilds & cache
+echo "Verificando pkgbuilds existentes"
+yay -Sc
+echo "Pkgbuild eliminadas" && clear
+
+# ????
+yay -yc
+clear
+
+# clean cache from arch
+echo "Verificando cache"
+du -sh .cache
+rm -rf .cache/*
+echo "Cache eliminada" && clear
+
+# update everything :]
+echo "actualizando cosas!"
+sudo pacman -Suy
+yay -Suy
+
+
+echo "Mantenimiento completado."

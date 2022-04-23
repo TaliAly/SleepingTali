@@ -1,0 +1,15 @@
+read -n1 -p """d|D Screen Fix
+u|U Update && Clean
+n|N Exit
+""" doit
+
+case $doit in  
+  d|D) sh ~/Support/screen ;;
+  u|U) sh ~/Support/clean_script.sh ;; 
+  n|N) exit ;;
+   
+  *) echo dont know ;; 
+esac
+
+echo Done!
+notify-send "Done!" "See you later"

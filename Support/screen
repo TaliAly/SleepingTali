@@ -1,0 +1,4 @@
+xrandr --auto
+xrandr --output eDP-1 --mode 1366x768
+
+light -S 50
