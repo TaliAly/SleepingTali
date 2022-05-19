@@ -6,6 +6,7 @@ clear
 printf "Here is the options:
     vs|VS) Install Vscode
     i3|I3) Install I3
+    yay|YAY) Install Yay
     else|exit) Exit
     \n"
 
@@ -14,5 +15,6 @@ read -p "What do you want to do? " res
 case $res in  
   i3|I3) sh ./scripts/i3.sh ;;
   vs|VS) sh ./scripts/vscode.sh ;;
+  yay|YAY) sh ./scripts/yay.sh
   exit|*) echo "exiting"; exit ;; 
 esac
