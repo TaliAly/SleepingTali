@@ -19,6 +19,9 @@ git clone https://github.com/TaliAly/SleepingTali.git && cd SleepingTali && sh m
 <br />
 <hr />
 
+<img src="./images/sleep.jpg" alt=" " width="200px" align="center">
+
+
 ### why?
 
 This is more of a simple way to get started with my machines, since I don't want to keep making everything from scratch I can just update this time to time to get the things I need and boom, I don't need to worry about hoping to have everything installed.

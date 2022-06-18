@@ -2,7 +2,7 @@
 
 printf "i3 install?, ok! \n" && sleep 1
 
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 # o
 mkdir ~/Downloads
@@ -33,6 +33,6 @@ sudo pacman -S --needed i3-gaps i3blocks
 
 ## the .dotfiles
 
-cp -R ./../.config/i3/ ~/.config/
-cp -R ./../.config/dunst/ ~/.config/
-cp ./../.config/.xinitrc ~/.xinitrc 
+cp -R ./.config/i3/ ~/.config/
+cp -R ./.config/dunst/ ~/.config/
+cp ./.config/.xinitrc ~/.xinitrc 
