@@ -16,17 +16,17 @@ sudo pacman -Scc --noconfirm
 # Remove Orphans 
 echo "Verificando paquetes huerfanos"
 sudo pacman -Rcns $(pacman -Qtdq) --noconfirm
-echo "Paquetes huerfanos eliminados" && sleep 2 && clear
+echo "Paquetes huerfanos eliminados" && sleep 2
 
 # Remove pkgbuilds & cache
 echo "Verificando pkgbuilds existentes"
 yay -Sc --noconfirm && yay -yc --noconfirm
-echo "Pkgbuild eliminadas" && sleep 2 && clear
+echo "Pkgbuild eliminadas" && sleep 2
 
 # clean cache from arch
 echo "Verificando cache"
 du -sh .cache
 rm -rf .cache/*
-echo "Cache eliminada" && sleep 2 && clear
+echo "Cache eliminada" && sleep 2
 
 notify-send "Done!" || echo "Mantenimiento completado."

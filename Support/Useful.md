@@ -26,3 +26,8 @@ It seems like on Sway/Wayland you need to add this to the .bashrc or if using sw
 > exec export SSH_AUTH_SOCK
 
 <br>
+
+
+It seems that in wm you could need a polkit agent, in that case you can use [this]("https://archlinux.org/packages/?name=lxqt-policykit"), to run it you'll have to add this line in the config of the wm you have choose add this line in the config of the wm you have choose
+
+> /usr/bin/lxqt-policykit-agent &
